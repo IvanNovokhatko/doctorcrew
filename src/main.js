@@ -1,5 +1,9 @@
-import './js/header.js';
+import './js/paw-hut-api.js'
+import './js/render-functions.js'
+import './js/burger-menu.js';
+import './js/filter.js'
 import './js/pets-list.js';
+import './js/pagination.js'
 import './js/about-us.js';
 import './js/faq.js';
 import './js/success-stories.js';

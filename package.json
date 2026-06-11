@@ -1,11 +1,11 @@
 {
-  "name": "project-our-project",
+  "name": "doctorcrew",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-our-project/",
+    "build": "vite build --base=/doctorcrew/",
     "preview": "vite preview"
   },
   "devDependencies": {
