@@ -83,8 +83,6 @@ const getCategories = async () => {
       renderCategories(response.data);
   } catch (error) {
     console.error(error);
-  } finally {
-    console.log("Request completed");
   }
     };
 
@@ -96,8 +94,6 @@ const getAnimals = async (object) => {
       renderAnimals(response.data.animals);
   } catch (error) {
     console.error(error);
-  } finally {
-    console.log("Request completed");
   }
     };
 
