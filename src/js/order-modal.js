@@ -1,4 +1,3 @@
-
 import Swal from "sweetalert2";
 
 const orderModal = document.querySelector("#order-modal");
