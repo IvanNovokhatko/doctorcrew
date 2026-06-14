@@ -1,10 +1,17 @@
 .footer {
+  background-color: #c3b49d;
   padding: 20px 0;
 }
 .footer-desc {
   text-align: center;
 }
 .footer-link {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px; 
+  line-height: 1.5;
+  letter-spacing: 0;
   position: relative;
 }
 .footer-link::before {
@@ -16,6 +23,108 @@
   z-index: -1;
   width: 110%;
   height: 24%;
-  background-color: #41d1ff;
+  /* background-color: #41d1ff; */
   transition: 200ms ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: rgba(2, 6, 10, 1);
+}
+
+.footer-link:active {
+  color: rgba(136, 118, 92, 1);
+}
+
+.footer-link.is-disabled {
+  color: rgba(2, 6, 10, 1);
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.footer-company-logo {
+  width: 302px; 
+  height: auto;
+  color: #000;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  margin-bottom: 48px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 24px; 
+  margin-bottom: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  color: #000;
+  transition: 0.2s ease;
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+  color: rgba(2, 6, 10, 1);
+}
+
+.footer-icon:active {
+  color: rgba(136, 118, 92, 1);
+}
+
+
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 24px;
+}
+
+.footer a {
+  cursor: pointer;
+}
+
+.footer-desc {
+  text-align: center;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-menu {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer-menu {
+    gap: 56px;
+  }
 }
