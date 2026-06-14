@@ -22,7 +22,7 @@
 }
 .ac .ac-panel {
   padding: 0 24px 24px;
- background: transparent;
+height: ;
 }
 
 
@@ -43,16 +43,10 @@
   background-color: var(--color-scheme-1-foreground);
   border-radius: 8px;
   overflow: hidden;
+  margin-bottom: 16px;
 }
 
-/* .faq-icon::before {
-    content: '+';
 
-    font-size: 24px;
-    font-weight: 400;
-
-    display: block;
-} */
 
 
 
@@ -70,11 +64,13 @@
 
 
 
+
+
 .answer-text {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
-    line-height: 150%;
+    line-height: 1.5;
     color: var(--color-scheme-1-text);
     margin-bottom: 15px;
 }
@@ -89,6 +85,10 @@
 }
 
 
+
+
+
+
 .list-decoration{
     list-style-type: disc;
     padding-left: 24px;
@@ -98,15 +98,44 @@
 
 
 @media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
+  .faq-question {
+    max-width: 100%;
+    font-size: 16px;
   }
+  .answer-list{
+    font-size: 14px;
+  }
+
+
 }
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    padding: 0 64px;
+  .faq-list{
+    max-width: 864px;
+
   }
+  .answer-list{
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .section-faq{
+    display: flex;
+  }
+}
+
+
+.ac .ac-panel {
+  overflow: hidden;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
 }
