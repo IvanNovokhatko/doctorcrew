@@ -62,6 +62,7 @@
   --color-scheme-2-foreground: var(--color-mariner-dark);
   --color-red: #ae0000;
 }
+
 /* #endregion-colors */
 
 /* #region-fonts */
@@ -69,6 +70,7 @@
   --font-family: "IBM Plex Sans", sans-serif;
   --second-family: "Open Sans", sans-serif;
 }
+
 /* #endregion-fonts */
 
 body {
@@ -83,6 +85,36 @@ body {
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
+}
+
+.global-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.global-loader::before {
+  content: '';
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 6px solid rgba(51, 44, 34, 0.15);
+  border-top-color: #332c22;
+  animation: loader-spin 0.9s linear infinite;
+}
+
+.global-loader.is-hidden {
+  display: none;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
