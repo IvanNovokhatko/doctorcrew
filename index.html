@@ -15,10 +15,46 @@
     <script type="module" crossorigin src="/doctorcrew/index.js"></script>
     <link rel="modulepreload" crossorigin href="/doctorcrew/assets/vendor-D7zVIL2X.js">
     <link rel="stylesheet" crossorigin href="/doctorcrew/assets/vendor-DnveWo0P.css">
-    <link rel="stylesheet" crossorigin href="/doctorcrew/assets/index-BPpmHKPp.css">
+    <link rel="stylesheet" crossorigin href="/doctorcrew/assets/index-CTerS-Xv.css">
   </head>
   <body>
-    
+    <header class="header">
+    <div class="header-container">
+
+        <a class="logo" href="./index.html" aria-label="Хатинка лапок — на головну">
+            <svg width="120" height="52" aria-hidden="true">
+                <use href="/doctorcrew/assets/icons-bv1T2WZQ.svg#company-logo"></use>
+            </svg>
+        </a>
+
+        <button class="burger-btn" type="button" aria-label="Відкрити меню" aria-expanded="false"
+            aria-controls="nav-wrapper">
+
+            <svg class="burger-icon" width="24" height="24" aria-hidden="true">
+                <use href="/doctorcrew/assets/icons-bv1T2WZQ.svg#menu"></use>
+            </svg>
+            
+            <svg class="close-icon" width="24" height="24" aria-hidden="true">
+                <use href="/doctorcrew/assets/icons-bv1T2WZQ.svg#close"></use>
+            </svg>
+        </button>
+
+        <div class="nav-wrapper" id="nav-wrapper">
+            <nav class="nav" aria-label="Головна навігація">
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="#pets-list">Знайди друга</a></li>
+                    <li><a class="nav-link" href="#about-us">Про нас</a></li>
+                    <li><a class="nav-link" href="#faq">Часті запитання</a></li>
+                    <li><a class="nav-link" href="#success-stories">Історії успіху</a></li>
+                </ul>
+            </nav>
+            <a href="#pets-list" class="header-btn">Взяти друга</a>
+        </div>
+
+        <div class="menu-overlay" aria-hidden="true"></div>
+
+    </div>
+</header>
 
     <main>
       <!-- Loads the specified .html file -->
