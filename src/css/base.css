@@ -71,6 +71,12 @@
 }
 /* #endregion-fonts */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -85,4 +91,9 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
 }
