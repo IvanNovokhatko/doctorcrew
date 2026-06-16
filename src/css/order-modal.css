@@ -17,6 +17,10 @@
   visibility 250ms ease;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .modal-overlay.is-open {
   opacity: 1;
   visibility: visible;
@@ -72,7 +76,9 @@
 }
 
 .modal-close-btn:active{
-border: solid 1px #02060a;
+top: 19px;
+right: 19px;
+border: solid 1px #88765c;
 }
 
 .order-title {

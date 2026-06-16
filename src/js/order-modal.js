@@ -20,10 +20,15 @@ let phoneIsValid;
 let commentIsValid;
 const url = 'https://paw-hut.b.goit.study/api/orders';
 
+//Block body scroll====================================
+
+document.body.classList.add('no-scroll');
+
 //Close options========================================
 
 function closeModal() {
   overlay.classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
 }
 
 closeBTN.addEventListener('click', closeModal);
@@ -91,7 +96,7 @@ function validateName(userName) {
   if (userName === '') {
     setError(`Поле "Ім'я" обов'язкове до заповнення`);
   } else if (userName.length > 32) {
-    setError(`Довжина ім'я не повинна перевищувати 32 символи`);
+    setError(`Ім'я не повинно перевищувати 32 символи`);
   } else if (/\d/.test(userName)) {
     setError(`Ім'я не повинно містити цифр`);
   } else {
@@ -107,7 +112,7 @@ function validatePhone(userPhone) {
   if (!pattern.test(userPhone)) {
     phoneErr.classList.add('show-error');
     phone.classList.add('error-border');
-    phoneErr.innerHTML = `Заповніть поле "Телефон" у форматі 380XXXXXXXXX`;
+    phoneErr.innerHTML = `Введіть телефон у форматі 380XXXXXXXXX`;
     phoneIsValid = false;
   } else {
     phoneErr.classList.remove('show-error');
@@ -121,7 +126,7 @@ function validateComment(userComment) {
   if (userComment.length > 500) {
     commentErr.classList.add('show-error');
     comment.classList.add('error-border');
-    commentErr.innerHTML = `Довжина тексту не повинна перевищувати 500 символів`;
+    commentErr.innerHTML = `Коментар не повинен перевищувати 500 символів`;
     commentIsValid = false;
   } else {
     commentErr.classList.remove('show-error');
