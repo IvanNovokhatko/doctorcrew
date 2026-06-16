@@ -12,3 +12,4 @@ import './js/faq.js';
 import './js/success-stories.js';
 import './js/animal-details-modal.js';
 import './js/order-modal.js';
+import './js/mistakes.js';
