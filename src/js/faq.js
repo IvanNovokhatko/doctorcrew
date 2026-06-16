@@ -2,23 +2,26 @@ import Accordion from 'accordion-js';
 
 
 
-const items = document.querySelectorAll('.ac');
 
-items.forEach(item => {
+function switchIcons() {
+  document.querySelectorAll('.ac').forEach(item => {
+    const icon = item.querySelector('.faq-icon use');
+
+    if (item.classList.contains('is-active')) {
+      icon.setAttribute('href', '/img/icons.svg#close');
+    } else {
+      icon.setAttribute('href', '/img/icons.svg#add');
+    }
+  });
+}
+
+document.querySelectorAll('.ac').forEach(item => {
   item.addEventListener('click', () => {
-    setTimeout(() => {
-      const icon = item.querySelector('.faq-icon use');
-
-      if (item.classList.contains('is-active')) {
-        icon.setAttribute('href', '/img/icons.svg#close');
-      } else {
-        icon.setAttribute('href', '/img/icons.svg#add');
-      }
-    }, 0);
+    setTimeout(updateIcons, 0);
   });
 });
 
-
+switchIcons();
 
 new Accordion('.accordion-container', {
   duration: 400,
