@@ -7,7 +7,7 @@
   font-family: var(--second-family);
   font-weight: 700;
   font-size: 36px;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: -0.01em;
   text-align: center;
   color: var(--color-scheme-1-text);
@@ -21,21 +21,21 @@
   margin-bottom: 16px;
 }
 
-.ac .ac-panel {
-  padding: 0 24px 24px;
-}
+
 
 .ac .ac-trigger {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  padding: 20px 24px;
   border: 0;
   text-align: left;
   cursor: pointer;
   background-color: var(--color-scheme-1-foreground);
 }
+
+
 
 .ac .ac-panel {
   overflow: hidden;
@@ -60,13 +60,15 @@
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   color: var(--color-scheme-1-text);
 
 }
 
 
-
+.faq-answer {
+  padding: 0 24px 24px 24px;
+}
 
 
 
@@ -77,13 +79,14 @@
   line-height: 1.5;
   color: var(--color-scheme-1-text);
   margin-bottom: 15px;
+
 }
 
 .answer-list {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 1.5;
   color: var(--color-scheme-1-text);
   margin-bottom: 10px;
 }
@@ -99,7 +102,7 @@
 
 @media only screen and (min-width: 768px) {
   .faq-question {
-    max-width: 100%;
+    max-width: 608px;
     font-size: 16px;
   }
 
@@ -112,6 +115,17 @@
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
+
+  .section-faq {
+    display: flex;
+  }
+
+  .faq-title {
+ 
+  font-size: 48px;
+
+}
+
   .faq-list {
     max-width: 864px;
 
@@ -123,10 +137,9 @@
   }
 
   .faq-question {
+    max-width: 100%;
     font-size: 18px;
   }
 
-  .section-faq {
-    display: flex;
-  }
+
 }
