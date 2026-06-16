@@ -1,0 +1,305 @@
+/* ==================== ABOUT-US SECTION ==================== */
+
+.about-us {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    background-color: #f6f4f1;
+}
+
+.about-title {
+    margin-bottom: 40px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    color: #02060a;
+}
+
+/* ==================== SLIDE ==================== */
+
+.about-us .swiper {
+    width: 100%;
+}
+
+.about-us .swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us .swiper-slide img {
+    width: 100%;
+    height: 402px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==================== TEXT OVER IMAGE ==================== */
+
+.about-slide-text {
+    position: absolute;
+
+    width: 295px;
+
+    left: 20px;
+    bottom: 20px;
+
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #f6f4f1;
+}
+
+/* ==================== PAGINATION ==================== */
+
+.about-us .swiper-pagination {
+    position: static;
+
+    display: flex;
+    align-items: center;
+
+    width: 60px;
+    height: 8px;
+
+    gap: 6px;
+
+    margin: 0;
+}
+
+/* ==================== NAVIGATION ==================== */
+
+.about-slider-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 64px;
+
+    margin-top: 24px;
+}
+
+.about-slider-buttons {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.about-us .swiper-button-prev,
+.about-us .swiper-button-next {
+    position: static;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0;
+
+    border: 1px solid #c3b49d;
+    border-radius: 8px;
+
+    background-color: #eee9e3;
+
+    outline: none;
+
+    transition:
+        border-color 250ms ease,
+        box-shadow 250ms ease;
+}
+
+.about-us .swiper-button-prev::after,
+.about-us .swiper-button-next::after {
+    display: none;
+}
+
+.about-us .swiper-button-prev:hover,
+.about-us .swiper-button-next:hover,
+.about-us .swiper-button-prev:focus,
+.about-us .swiper-button-next:focus {
+    border-color: rgba(2, 6, 10, 0.6);
+    background: #eee9e3;
+}
+
+.about-us .swiper-button-prev:active,
+.about-us .swiper-button-next:active {
+    border-color: rgba(2, 6, 10, 0.6);
+
+    box-shadow: inset 0 4px 6px -2px rgba(0, 0, 0, 0.03), 
+                inset 0 12px 16px -4px rgba(0, 0, 0, 0.08);
+    background: #eee9e3;
+}
+
+.about-us .swiper-button-disabled {
+    opacity: 0.4;
+    border-color: #f6f4f1;
+    background-color: #eee9e3;
+}
+
+/* ==================== SWIPER ==================== */
+
+.about-us .swiper-pagination {
+    position: static;
+
+    display: flex;
+    align-items: center;
+
+    width: 60px;
+    height: 8px;
+
+    gap: 8px;
+    margin: 0;
+
+    transform: translateY(-8px);
+}
+
+.about-us .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+
+    margin: 0;
+
+    border-radius: 50%;
+    background: #c3b49d;
+    opacity: 1;
+}
+
+.about-us .swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+
+    background: #02060a;
+}
+
+.about-us .swiper-button-prev svg,
+.about-us .swiper-button-next svg {
+    stroke: #02060a;
+
+    width: 24px;
+    height: 24px;
+}
+
+.swiper {
+    --swiper-pagination-color: #02060a;
+    --swiper-pagination-bullet-inactive-color: #c3b49d;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+.about-us .swiper-button-prev,
+.about-us .swiper-button-next {
+    position: static;
+    color: #02060a;   
+} 
+
+
+
+/* ==================== TABLET ==================== */
+
+@media screen and (min-width: 768px) {
+
+    .about-title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+
+    .about-us .swiper {
+        width: 704px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .about-us .swiper-slide img {
+        width: 704px;
+        height: 456px;
+    }
+
+    .about-slide-text {
+        width: 548px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+
+        left: 28px;
+        bottom: 28px;
+    }
+
+.about-slider-navigation {
+    width: 704px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 24px;
+}
+
+.about-us .swiper-pagination {
+    width: auto;
+    justify-content: center;
+    transform: none;
+}
+
+.about-us .swiper-button-prev,
+.about-us .swiper-button-next {
+    position: absolute;
+    top: 228px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.about-slider-buttons {
+    position: absolute;
+    top: 236px;
+    left: -24px;
+    right: -24px;
+    justify-content: space-between;
+}
+}
+
+/* ==================== DESKTOP ==================== */
+
+@media screen and (min-width: 1440px) {
+    .about-us {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .about-us .swiper {
+        width: 1312px;
+        margin: 0 auto;
+    }
+
+    .about-us .swiper-slide img {
+        width: 1312px;
+        height: 753px;
+    }
+
+    .about-slide-text {
+        width: 548px;
+
+        left: 64px;
+        bottom: 64px;
+
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .about-slider-navigation {
+        width: 1312px;
+    }
+.about-slider-buttons {
+    position: absolute;
+    top: 380px;
+    left: -24px;
+    right: -24px;
+    justify-content: space-between;
+}
+}
+
+

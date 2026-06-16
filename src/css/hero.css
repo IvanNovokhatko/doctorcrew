@@ -81,6 +81,7 @@ display: flex;
 display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: content-box;
     flex-direction: row;
     gap: 8px;
     border: 1px solid var(--color-mariner-dark);
@@ -100,6 +101,13 @@ display: flex;
     border:1px solid var(--color-mariner-dark);
     background: var(--color-mariner-lighter);
     color: var(--color-scheme-1-text);
+
+}
+
+
+.stories-btn:active {
+    box-shadow: inset 0 4px 6px -2px rgba(0, 0, 0, 0.03), inset 0 12px 16px -4px rgba(0, 0, 0, 0.08);
+        background: var(--color-mariner-lighter);
 
 }
 
@@ -132,10 +140,7 @@ display: flex;
         height: 168px;
         }
 
-    .stories-btn {
-        width: 189px;
-        height: 48px;
-    }
+    
 
         .content-hero h1 {
                 font-size: 56px;
@@ -176,5 +181,10 @@ display: flex;
             width: 622px;
                 height: 279px;
         }
+
+                .stories-btn {
+                    width: 189px;
+                    height: 48px;
+                }
 
 }
