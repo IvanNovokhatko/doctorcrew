@@ -1,13 +1,19 @@
+
+
 import Accordion from 'accordion-js';
+import sprite from '../img/icons.svg';
 
 new Accordion('.accordion-container', {
-  onOpen(item) {
-    item.querySelector('.faq-icon use')
-      .setAttribute('href', '/img/icons.svg#close');
+  duration: 400,
+  showMultiple: false,
+
+  onOpen(currentItem) {
+    const icon = currentItem.querySelector('.faq-icon use');
+    icon.setAttribute('href', `${sprite}#close`);
   },
 
-  onClose(item) {
-    item.querySelector('.faq-icon use')
-      .setAttribute('href', '/img/icons.svg#add');
-  }
+  onClose(currentItem) {
+    const icon = currentItem.querySelector('.faq-icon use');
+    icon.setAttribute('href', `${sprite}#add`);
+  },
 });
