@@ -1,5 +1,7 @@
  /* === MOBILE === */
-  
+    html {
+      scroll-behavior: smooth;
+    }
     .header {
       background-color: #ffffff;
     }
@@ -9,7 +11,6 @@
       align-items: center;
       justify-content: space-between;
       height: 64px;
-      padding: 0 12px 0 20px;
     }
   
     .logo {
@@ -57,17 +58,21 @@
   
     .burger-btn.is-open .close-icon {
       display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
-        .menu-logo {
-          align-self: flex-start;
-        }
+    .menu-logo {
+      align-self: flex-start;
+    }
     
-        .menu-logo svg {
-          display: block;
-          width: 159px;
-          height: 68px;
-        }
+    .menu-logo svg {
+      display: block;
+      width: 159px;
+      height: 68px;
+    }
   
   
     .menu-overlay {
@@ -93,11 +98,11 @@
       z-index: 200;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
       gap: 64px;
       background-color: #f6f4f1;
-      padding: 24px 20px 0;
+      padding: 16px 20px 80px;
       transform: translateX(100%);
       visibility: hidden;
       transition:
@@ -106,9 +111,10 @@
     }
   
     .nav-wrapper .header-btn {
-      width: 335px;
-      min-width: 335px;
+      width: 100%;
       height: 37px;
+      justify-content: center;
+      box-sizing: border-box;
     }
   
     .nav-wrapper.is-open {
@@ -119,7 +125,10 @@
     .nav-list {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
       gap: 24px;
       margin: 0;
       padding: 0;
@@ -130,9 +139,6 @@
       color: #02060a;
       text-decoration: none;
       font-family: "IBM Plex Sans", sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.5;
       transition: color 250ms ease;
     }
   
@@ -151,7 +157,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 130px;
+      width: 100%;
       height: 40px;
       padding: 8px 20px;
       background-color: #88765c;
@@ -197,13 +203,15 @@
     @media screen and (min-width: 768px) {
       .header-container {
         height: 64px;
-        padding: 0 32px;
       }
   
       .nav-wrapper {
-        justify-content: flex-start;
+        align-items: center;
         gap: 64px;
         padding-top: 24px;
+      }
+      .nav-list {
+        align-items: center;
       }
   
       .nav-wrapper .header-btn {
@@ -211,16 +219,14 @@
         min-width: 196px;
         height: 37px;
       }
+
     }
   
     /* === DESKTOP === */
   
     @media screen and (min-width: 1440px) {
       .header-container {
-        max-width: 1440px;
         height: 72px;
-        margin: 0 auto;
-        padding: 0 64px;
       }
       .menu-logo {
         display: none;
@@ -253,12 +259,21 @@
         flex-direction: row;
         gap: 32px;
       }
+
+      .nav-link {
+        font-size: 16px;
+      }
   
       .nav-wrapper .header-btn {
         width: 130px;
         min-width: 130px;
+        max-width: 130px;
         height: 40px;
         margin-left: auto;
+        flex-shrink: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
       }
     }
         @media (prefers-reduced-motion: reduce) {
