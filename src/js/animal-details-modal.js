@@ -102,6 +102,7 @@ const onTakeMeHomeClick = (e) => {
     if (!e.target.classList.contains('take-home-btn')) { return };
     orderModal.classList.add('is-open');
     closeModal();
+    body.classList.add("no-scroll");
 }
 
 
