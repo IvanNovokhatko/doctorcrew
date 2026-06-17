@@ -20,9 +20,7 @@ let phoneIsValid;
 let commentIsValid;
 const url = 'https://paw-hut.b.goit.study/api/orders';
 
-//Block body scroll====================================
 
-document.body.classList.add('no-scroll');
 
 //Close options========================================
 
