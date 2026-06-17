@@ -53,7 +53,7 @@ const renderAnimals = (animals) => {
       <p class="pets-list__descriprion">
         ${animal.shortDescription}
       </p>
-      <button class="pets-list__button" type="button" data-id=${animal._id}>Дізнатись більше</button>
+      <button class="pets-list__button" type="button" data-id=${animal._id} data-description="${animal.description}" data-health="${animal.healthStatus}" data-behavior="${animal.behavior}">Дізнатись більше</button>
     </li>`;
     })
         .join("");
