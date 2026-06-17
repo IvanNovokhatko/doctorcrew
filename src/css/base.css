@@ -97,3 +97,19 @@ a,
 button {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* glowing of section */
+
+.section:target {
+animation: highlight 5s ease;
+}
+
+@keyframes highlight {
+0% {
+background-color: #88765c;
+}
+
+100% {
+background-color: transparent;
+}
+}

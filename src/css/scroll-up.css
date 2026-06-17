@@ -1,23 +1,25 @@
-main {
+main{
     position: relative;
 }
 .scroll-up{
     position: fixed;
-    top: 100px;
+    bottom: 20px;
+    right: calc((100vw - 320px) / 2 + 20px);
     z-index: 900;
-    right: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+opacity: 0.3;
     width: 48px;
     height: 48px;
-
+display: flex;
+justify-content: center;
+align-items: center;
     margin: 0;
 
     border: 1px solid #c3b49d;
     border-radius: 8px;
-
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     background-color: #eee9e3;
 
     outline: none;
@@ -27,9 +29,28 @@ main {
         box-shadow 250ms ease;
 }
 
-
-.scroll-up:hover,
-.scroll-up:focus{
+.scroll-up>svg{
+    justify-self: center;
+        align-self: center;
+}
+.scroll-up:active{
     border-color: rgba(2, 6, 10, 0.6);
     background: #eee9e3;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .scroll-up{
+        right: calc((100vw - 768px) / 2 + 20px);
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .scroll-up{
+        right: calc((100vw - 1440px) / 2);
+        bottom: 10px;
+         }
+.scroll-up:hover{
+    opacity: 1;
+}
 }

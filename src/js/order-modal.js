@@ -1,4 +1,6 @@
 import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 //DOM elements=========================================
 
@@ -11,7 +13,7 @@ const phone = document.querySelector('[name="user-phone"]');
 const phoneErr = phone.nextElementSibling;
 const comment = document.querySelector('[name="user-comment"]');
 const commentErr = comment.nextElementSibling;
-const takeHomeBTN = document.querySelector('.take-home-btn'); //перевірити чи знаходить
+const submitBTN = document.querySelector('.modal-button'); //перевірити чи знаходить
 
 //Global================================================
 
@@ -19,8 +21,6 @@ let nameIsValid;
 let phoneIsValid;
 let commentIsValid;
 const url = 'https://paw-hut.b.goit.study/api/orders';
-
-
 
 //Close options========================================
 
@@ -53,9 +53,8 @@ form.addEventListener('submit', async event => {
   if (userComment === '') {
     userComment = 'коментар відсутній';
   }
-  const petID = takeHomeBTN.dataset.id; //перевірити чи знаходить
+  const petID = submitBTN.dataset.id; //перевірити чи знаходить
 
-  console.log(userName, userPhone, userComment);
   validateName(userName);
   validatePhone(userPhone);
   validateComment(userComment);
@@ -69,12 +68,16 @@ form.addEventListener('submit', async event => {
     };
     try {
       const res = await axios.post(url, order);
-      console.log(
-        `Ваше замовлення успішно збережено під номером ${res.data.orderNum}` // замінити на пуш сповіщення
-      );
-      console.log(res.data);
+
+      iziToast.success({
+        title: '',
+        message: `Ваше замовлення успішно збережено під номером ${res.data.orderNum}`,
+      });
     } catch (error) {
-      console.log('Вибачте сталася помилка при надсиланні запиту'); // замінити на пуш сповіщення
+      iziToast.error({
+        title: '',
+        message: 'Вибачте сталася помилка при надсиланні запиту',
+      });
     } finally {
       event.target.reset();
       closeModal();
