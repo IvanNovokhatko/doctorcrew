@@ -1,21 +1,37 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const loader = document.querySelector('#global-loader');
-
 let activeLoaderCount = 0;
 
-//  Loader 
+function getLoader() {
+  let loader = document.querySelector('#global-loader');
+
+  if (!loader) {
+    loader = document.createElement('div');
+    loader.id = 'global-loader';
+    loader.classList.add('is-hidden');
+
+    loader.innerHTML = `
+      <div class="loader"></div>
+    `;
+
+    document.body.append(loader);
+  }
+
+  return loader;
+}
+
+// Loader
 
 export function showLoader() {
-  if (!loader) return;
+  const loader = getLoader();
 
   activeLoaderCount += 1;
   loader.classList.remove('is-hidden');
 }
 
 export function hideLoader() {
-  if (!loader) return;
+  const loader = getLoader();
 
   activeLoaderCount = Math.max(activeLoaderCount - 1, 0);
 
@@ -135,3 +151,8 @@ export function showWarning(message) {
 // showInfo('Тест інформації');
 // showWarning('Тест попередження');
 
+// showLoader();
+
+// setTimeout(() => {
+//   hideLoader();
+// }, 3000);
