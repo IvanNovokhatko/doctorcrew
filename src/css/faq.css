@@ -101,16 +101,22 @@
 
 
 @media only screen and (min-width: 768px) {
+
+  .section-faq{
+     margin: 60px 0;
+  }
+
   .faq-question {
     max-width: 608px;
     font-size: 16px;
+   
   }
+
+
 
   .answer-list {
     font-size: 14px;
   }
-
-
 }
 
 /* Styles for Desktop devices */
@@ -118,6 +124,7 @@
 
   .section-faq {
     display: flex;
+    margin: 80px 0;
   }
 
   .faq-title {
