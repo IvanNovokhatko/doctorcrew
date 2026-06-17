@@ -27,8 +27,6 @@ let page = 1;
 let totalPages;
 let cardHeight = 500;
 
-// totalPages = Math.ceil(data.totalHits / limit);
-
 // Render Functions (replace)
 
 const renderAnimals = (animals) => {
@@ -79,36 +77,6 @@ const getAnimals = async (object) => {
 
 
 // EventListener Functions
-
-// const onDocumentContentLoaded = (e) => {
-//     if (window.matchMedia("(min-width: 1440px)").matches) {
-//         limit = 9;
-// } else {
-//     limit = 8;
-//     }
-
-//     const filterButton = document.querySelector(".filter-list__button.is-active");
-//     categoryId = filterButton.dataset.id;
-
-//     if (categoryId === "all") {
-//         getAnimals(
-//         {params: {
-//           limit: limit,
-//         },})
-//         .catch(error => {
-//             console.log(error);
-//         });
-//     } else {
-//         getAnimals(
-//         {params: {
-//           limit: limit,
-//           categoryId: categoryId,
-//         },})
-//         .catch(error => {
-//                 console.log(error);
-//         });;
-//     };
-// };
 
 const onLoadMoreBtnClick = (e) => {
     filterButton = document.querySelector(".filter-list__button.is-active");
@@ -184,6 +152,5 @@ const onWindowResize = (e) => {
     
 
 // EventListeners
-// document.addEventListener('DOMContentLoaded', onDocumentContentLoaded);
 loadMoreBtn.addEventListener('click', onLoadMoreBtnClick);
 window.addEventListener('resize', onWindowResize);
