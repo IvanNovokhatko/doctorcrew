@@ -32,7 +32,9 @@ let categoryId;
 const closeModal = () => {
     body.classList.remove("no-scroll");
     animalBackdrop.classList.remove("is-open");
+    setTimeout(() => {
     animalModal.innerHTML = "";
+    }, 250)
 };
 
 
@@ -99,6 +101,7 @@ const onAnimalCloseBtnClick = (e) => {
 const onTakeMeHomeClick = (e) => {
     if (!e.target.classList.contains('take-home-btn')) { return };
     orderModal.classList.add('is-open');
+    closeModal();
 }
 
 
