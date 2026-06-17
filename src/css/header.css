@@ -3,7 +3,9 @@
     .header {
       background-color: #ffffff;
     }
-  
+    html {
+      scroll-behavior: smooth;
+    }
     .header-container {
       display: flex;
       align-items: center;
