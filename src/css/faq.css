@@ -1,0 +1,152 @@
+.section-faq {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.faq-title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+  margin-bottom: 40px;
+}
+
+.ac {
+  background-color: var(--color-scheme-1-foreground);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+
+
+.ac .ac-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  background-color: var(--color-scheme-1-foreground);
+}
+
+
+
+.ac .ac-panel {
+  overflow: hidden;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+}
+
+.faq-answer ol {
+  padding-left: 24px;
+}
+
+
+.faq-question {
+  max-width: 240px;
+
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+
+}
+
+
+.faq-answer {
+  padding: 0 24px 24px 24px;
+}
+
+
+
+.answer-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+  margin-bottom: 15px;
+
+}
+
+.answer-list {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+  margin-bottom: 10px;
+}
+
+
+.list-decoration {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .section-faq{
+     margin: 60px 0;
+  }
+
+  .faq-question {
+    max-width: 608px;
+    font-size: 16px;
+   
+  }
+
+
+
+  .answer-list {
+    font-size: 14px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+
+  .section-faq {
+    display: flex;
+    margin: 80px 0;
+  }
+
+  .faq-title {
+ 
+  font-size: 48px;
+
+}
+
+  .faq-list {
+    max-width: 864px;
+
+  }
+
+  .answer-list {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .faq-question {
+    max-width: 100%;
+    font-size: 18px;
+  }
+
+
+}

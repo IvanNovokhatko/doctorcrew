@@ -71,10 +71,16 @@
 }
 /* #endregion-fonts */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   margin: 0;
   font-family: var(--font-family);
@@ -85,4 +91,25 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* glowing of section */
+
+.section:target {
+animation: highlight 5s ease;
+}
+
+@keyframes highlight {
+0% {
+background-color: #88765c;
+}
+
+100% {
+background-color: transparent;
+}
 }

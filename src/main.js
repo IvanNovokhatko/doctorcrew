@@ -1,3 +1,6 @@
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import './js/paw-hut-api.js'
 import './js/render-functions.js'
 import './js/burger-menu.js';
@@ -9,3 +12,4 @@ import './js/faq.js';
 import './js/success-stories.js';
 import './js/animal-details-modal.js';
 import './js/order-modal.js';
+import './js/mistakes.js';

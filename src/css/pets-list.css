@@ -337,3 +337,8 @@
     opacity: 0.3;
 }
 /* #endregion Pets-Section */
+
+/* For JS */
+.pets-section__button.is-hidden {
+    display: none;
+}
